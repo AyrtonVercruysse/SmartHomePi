@@ -12,7 +12,7 @@ def test():
  return "Test succeeded"
 
 @app.route("/milight/off", methods=['PUT'])
-def test():
+def test2():
  os.system("~/milight_binaries/milight off")
  return "Test succeeded"
 
