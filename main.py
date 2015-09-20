@@ -6,9 +6,14 @@ app = Flask(__name__)
 def hello():
  return "Hello World!"
 
-@app.route("/test", methods=['PUT'])
+@app.route("/milight/on", methods=['PUT'])
 def test():
  os.system("~/milight_binaries/milight on")
+ return "Test succeeded"
+
+ @app.route("/milight/off", methods=['PUT'])
+def test():
+ os.system("~/milight_binaries/milight off")
  return "Test succeeded"
 
 
