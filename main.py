@@ -1,4 +1,5 @@
 from flask import Flask
+import os
 app = Flask(__name__)
 
 @app.route("/")
@@ -7,7 +8,10 @@ def hello():
 
 @app.route("/test", methods=['PUT'])
 def test():
+ os.system("~/milight_binaries/milight on")
  return "Test succeeded"
+
+
 
 
 if __name__ == "__main__":
