@@ -6,15 +6,24 @@ app = Flask(__name__)
 def hello():
  return "Hello World!"
 
-@app.route("/milight/on", methods=['PUT'])
-def test():
- os.system("~/milight_binaries/milight on")
+@app.route("/milight/<zone>/on", methods=['PUT'])
+def LEDon():
+ os.system("~/milight_binaries/milight  {{zone}} on")
  return "Test succeeded"
 
-@app.route("/milight/off", methods=['PUT'])
-def test2():
- os.system("~/milight_binaries/milight off")
+@app.route("/milight/<zone>/off", methods=['PUT'])
+def LEDoff():
+ os.system("~/milight_binaries/milight {{zone}} off")
  return "Test succeeded"
+
+@app.route("/milight/", methods=['PUT'])
+
+@app.route("/milight/off", methods=['PUT'])
+
+@app.route("/milight/off", methods=['PUT'])
+
+@app.route("/milight/off", methods=['PUT'])
+
 
 
 
