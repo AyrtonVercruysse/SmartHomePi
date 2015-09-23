@@ -16,18 +16,6 @@ def LEDoff():
  os.system("~/milight_binaries/milight {{zone}} off")
  return "Test succeeded"
 
-@app.route("/milight/", methods=['PUT'])
-
-@app.route("/milight/off", methods=['PUT'])
-
-@app.route("/milight/off", methods=['PUT'])
-
-@app.route("/milight/off", methods=['PUT'])
-
-
-
-
-
 if __name__ == "__main__":
 
  app.run(host='0.0.0.0');
