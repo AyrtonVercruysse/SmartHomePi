@@ -8,12 +8,12 @@ def hello():
  return "Hello World!"
 
 @app.route("/milight/on/<zone>", methods=['PUT'])
-def LEDon():
+def LEDon(zone):
  os.system("~/milight_binaries/milight  {{zone}} on")
  return "Test succeeded"
 
 @app.route("/milight/off/<zone>", methods=['PUT'])
-def LEDoff():
+def LEDoff(zone):
  os.system("~/milight_binaries/milight {{zone}} off")
  return "Test succeeded"
 
