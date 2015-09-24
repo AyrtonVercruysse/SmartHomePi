@@ -14,7 +14,7 @@ def LEDon(zone):
 
 @app.route("/milight/off/<zone>", methods=['PUT'])
 def LEDoff(zone):
- os.system("~/milight_binaries/milight " {{zone}} " off")
+ os.system("~/milight_binaries/milight %s off") %{{zone}}
  return "Test succeeded"
 
 if __name__ == "__main__":
