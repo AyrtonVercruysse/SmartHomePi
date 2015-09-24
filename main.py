@@ -1,4 +1,5 @@
 from flask import Flask
+import bottle
 import os
 app = Flask(__name__)
 
@@ -6,12 +7,12 @@ app = Flask(__name__)
 def hello():
  return "Hello World!"
 
-@app.route("/milight/<zone>/on", methods=['PUT'])
+@app.route("/milight/on/<zone>", methods=['PUT'])
 def LEDon():
  os.system("~/milight_binaries/milight  {{zone}} on")
  return "Test succeeded"
 
-@app.route("/milight/<zone>/off", methods=['PUT'])
+@app.route("/milight/off/<zone>", methods=['PUT'])
 def LEDoff():
  os.system("~/milight_binaries/milight {{zone}} off")
  return "Test succeeded"
