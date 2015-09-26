@@ -9,13 +9,14 @@ def hello():
 
 @app.route("/milight/on/<zone>", methods=['PUT'])
 def LEDon(zone):
- os.system("~/milight_binaries/milight 0 on")
+ string = "~/milight_binaries/milight %s on" % zone
+ os.system(string)
  return "Test succeeded"
 
 @app.route("/milight/off/<zone>", methods=['PUT'])
 def LEDoff(zone):
- tester = "~/milight_binaries/milight %s off" %  zone
- os.system(tester) 
+ string = "~/milight_binaries/milight %s off" %  zone
+ os.system(string) 
  return "Test succeeded"
 
 if __name__ == "__main__":
