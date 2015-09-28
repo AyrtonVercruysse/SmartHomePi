@@ -19,32 +19,32 @@ def LEDoff(zone):
  os.system(string) 
  return "Test succeeded"
 
-@app.rout("/milight/white/<zone>", methods=['PUT'])
+@app.route("/milight/white/<zone>", methods=['PUT'])
 def LEDwhite(zone):
  string = "~/milight_binaries/milight %s white" %  zone
  os.system(string) 
  return "Test succeeded"
 
-@app.rout("/milight/disco/<zone>", methods=['PUT'])
-def LEDwhite(zone):
+@app.route("/milight/disco/<zone>", methods=['PUT'])
+def LEDdisco(zone):
  string = "~/milight_binaries/milight %s disco" %  zone
  os.system(string) 
  return "Test succeeded"
 
-@app.rout("/milight/disco/<zone>/<speed>", methods=['PUT'])
-def LEDwhite(zone, speed):
+@app.route("/milight/disco/<zone>/<speed>", methods=['PUT'])
+def LEDdiscospeed(zone, speed):
  string = "~/milight_binaries/milight %s disco %s" %  (zone, speed)
  os.system(string) 
  return "Test succeeded"
 
-@app.rout("/milight/brightness/<zone>/<value>", methods=['PUT'])
-def LEDwhite(zone, value):
+@app.route("/milight/brightness/<zone>/<value>", methods=['PUT'])
+def LEDbrightness(zone, value):
  string = "~/milight_binaries/milight %s brightness %s" %  (zone, value)
  os.system(string) 
  return "Test succeeded"
 
-@app.rout("/milight/color/<zone>/<value>", methods=['PUT'])
-def LEDwhite(zone, value):
+@app.route("/milight/color/<zone>/<value>", methods=['PUT'])
+def LEDcolor(zone, value):
  string = "~/milight_binaries/milight %s color %s" %  (zone, value)
  os.system(string) 
  return "Test succeeded"
