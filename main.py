@@ -31,7 +31,7 @@ def LEDwhite(zone):
  os.system(string) 
  return "Test succeeded"
 
- @app.rout("/milight/disco/<zone>/<speed>", methods=['PUT'])
+@app.rout("/milight/disco/<zone>/<speed>", methods=['PUT'])
 def LEDwhite(zone, speed):
  string = "~/milight_binaries/milight %s disco %s" %  (zone, speed)
  os.system(string) 
